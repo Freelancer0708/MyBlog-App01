@@ -237,6 +237,7 @@ h2 {
     width: 100%;
     border-radius: 10px;
     margin-bottom: 10px;
+    resize: vertical;
 }
 .createbox textarea {
     height: 100px;
@@ -281,9 +282,21 @@ h2 {
 .createbox > button {
     border: 1px solid cadetblue;
     outline: none;
-    background-color: azure;
-    padding: 10px 20px;
+    background-color: cadetblue;
+    color: #fff;
+    padding: 8px 16px;
     margin-bottom: 10px;
+    border-radius: 10px;
+    font-size: 12px;
+    cursor: pointer;
+}
+.postslist {
+    overflow-y: scroll;
+    height: 460px;
+    width: 100%;
+    padding: 10px 20px;
+    border: 1px solid cadetblue;
+    background-color: azure;
     border-radius: 10px;
 }
 .posts {
@@ -291,14 +304,20 @@ h2 {
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-start;
-    margin-bottom: 20px;
+    margin-bottom: 8px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid cadetblue;
 }
 .posts h2 {
     font-size: 18px;
     margin-bottom: 0;
+    width: 100%;
+    word-break: break-word;
 }
 .posts p {
     font-size: 14px;
+    width: 100%;
+    word-break: break-word;
 }
 .postsbutton {
     display: flex;
@@ -384,6 +403,77 @@ h2 {
     font-size: 12px;
     display: flex;
 }
+.navigation-buttons {
+    position: relative;
+    width: 100%;
+    margin-top: 40px;
+    height: 50px;
+}
+.navigation-buttons .prevbtn {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    outline: none;
+    border: 2px solid cadetblue;
+    color: cadetblue;
+    font-weight: bold;
+    height: 50px;
+    width: 160px;
+    border-radius: 10px;
+}
+.navigation-buttons .backbtn {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    outline: none;
+    background-color: cadetblue;
+    color: #fff;
+    height: 50px;
+    width: 160px;
+    border-radius: 10px;
+}
+.navigation-buttons .nextbtn {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    outline: none;
+    border: 2px solid cadetblue;
+    color: cadetblue;
+    font-weight: bold;
+    height: 50px;
+    width: 160px;
+    border-radius: 10px;
+}
+.navigation-buttons .prevbtn::before {
+    position: absolute;
+    content: "◀";
+    font-size: 12px;
+    color: cadetblue;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.navigation-buttons .nextbtn::before {
+    position: absolute;
+    content: "▶";
+    font-size: 12px;
+    color: cadetblue;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+}
 
 @media screen and (max-width: 767px) {
     header {
@@ -435,7 +525,6 @@ h2 {
     .tweets {
         max-height: 320px;
     }
-
     .profile-username > div, .profile-email > div, .profile-password > div {
         flex-direction: column;
         align-items: center;
@@ -462,8 +551,24 @@ h2 {
         font-size: 12px;
         padding: 8px 0;
     }
-
     .publishbox {
         gap: 10px;
+    }
+    .createbox > input, .createbox > textarea {
+        padding: 5px 10px;
+        border-radius: 4px;
+        margin-bottom: 4px;
+        font-size: 12px;
+    }
+    .postslist {
+        height: 270px;
+        padding: 4px 10px;
+        border-radius: 4px;
+    }
+    .posts h2 {
+        font-size: 14px;
+    }
+    .posts p {
+        font-size: 12px;
     }
 }

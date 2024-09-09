@@ -133,11 +133,11 @@ const Admin = () => {
         </button>
       </div>
 
-      <div>
+      <div className='postslist'>
         {blogPosts.map((post) => (
           <div key={post.id} className='posts'>
             <h2>{post.title}</h2>
-            <p>{post.content}</p>
+            <p style={{ whiteSpace: 'pre-wrap' }}>{post.content}</p>
             <p>作成日: {post.createdAt ? post.createdAt : 'N/A'}</p>
             <p>更新日: {post.updatedAt ? post.updatedAt : 'N/A'}</p>
             <div className='postsbutton'>

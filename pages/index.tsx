@@ -13,7 +13,7 @@ interface BlogPost {
 const Home = ({ blogPosts }: { blogPosts: BlogPost[] }) => {
   return (
     <div className='home'>
-      <h1>Blog Posts</h1>
+      <h1>投稿記事一覧</h1>
       <ul>
         {blogPosts.map((post) => (
           <li key={post.id}>
