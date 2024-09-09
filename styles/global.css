@@ -571,4 +571,33 @@ h2 {
     .posts p {
         font-size: 12px;
     }
+    .navigation-buttons {
+        height: 40px;
+        margin-top: 30px;
+    }
+    .navigation-buttons .prevbtn {
+        width: 30%;
+        font-size: 12px;
+        height: 40px;
+        padding-left: 3%;
+    }
+    .navigation-buttons .backbtn {
+        width: 32%;
+        font-size: 12px;
+        height: 40px;
+    }
+    .navigation-buttons .nextbtn {
+        width: 30%;
+        font-size: 12px;
+        height: 40px;
+        padding-right: 3%;
+    }
+    .navigation-buttons .prevbtn::before {
+        left: 9%;
+        font-size: 10px;
+    }
+    .navigation-buttons .nextbtn::before {
+        right: 9%;
+        font-size: 10px;
+    }
 }
